@@ -8,4 +8,4 @@ y = np.sin(x)
 
 # 그래프 그리기
 plt.plot(x, y)
-plt.show()
+plt.savefig('sin_graph.jpg')

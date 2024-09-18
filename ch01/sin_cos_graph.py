@@ -14,4 +14,4 @@ plt.xlabel("x") # x축 이름
 plt.ylabel("y") # y축 이름
 plt.title('sin & cos')
 plt.legend()
-plt.show()
+plt.savefig('sin_cos_graph.jpg')
