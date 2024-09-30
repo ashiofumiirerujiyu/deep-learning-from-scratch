@@ -70,4 +70,4 @@ if __name__ == '__main__':
     plt.grid()
     plt.legend()
     plt.draw()
-    plt.show()
+    plt.savefig('gradient_2d.jpg')
