@@ -65,7 +65,6 @@ for i, w in enumerate(weight_scale_list):
     train_acc_list, bn_train_acc_list = __train(w)
     
     plt.subplot(4,4,i+1)
-    plt.title("W:" + str(w))
     if i == 15:
         plt.plot(x, bn_train_acc_list, label='Batch Normalization', markevery=2)
         plt.plot(x, train_acc_list, linestyle = "--", label='Normal(without BatchNorm)', markevery=2)
@@ -84,4 +83,4 @@ for i, w in enumerate(weight_scale_list):
         plt.xlabel("epochs")
     plt.legend(loc='lower right')
     
-plt.show()
+plt.savefig('batch_norm_test.jpg')

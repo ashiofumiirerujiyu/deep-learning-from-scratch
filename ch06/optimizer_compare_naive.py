@@ -67,4 +67,4 @@ for key in optimizers:
     plt.xlabel("x")
     plt.ylabel("y")
     
-plt.show()
+plt.savefig('optimizer_compare_naive.jpg')

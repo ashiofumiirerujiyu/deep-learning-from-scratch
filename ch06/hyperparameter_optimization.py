@@ -74,4 +74,4 @@ for key, val_acc_list in sorted(results_val.items(), key=lambda x:x[1][-1], reve
     if i >= graph_draw_num:
         break
 
-plt.show()
+plt.savefig('hyperparameter_optimization.jpg')
