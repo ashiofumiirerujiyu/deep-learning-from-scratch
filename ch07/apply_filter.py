@@ -51,4 +51,4 @@ for i in range(16):
     ax = fig.add_subplot(4, 4, i+1, xticks=[], yticks=[])
     ax.imshow(out, cmap=plt.cm.gray_r, interpolation='nearest')
 
-plt.show()
+plt.savefig('apply_filter.jpg')

@@ -3,7 +3,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 from simple_convnet import SimpleConvNet
 
-def filter_show(filters, nx=8, margin=3, scale=10):
+def filter_show(filters, nx=8, margin=3, scale=10, train=False):
     """
     c.f. https://gist.github.com/aidiary/07d530d5e08011832b12#file-draw_weight-py
     """
@@ -16,7 +16,10 @@ def filter_show(filters, nx=8, margin=3, scale=10):
     for i in range(FN):
         ax = fig.add_subplot(ny, nx, i+1, xticks=[], yticks=[])
         ax.imshow(filters[i, 0], cmap=plt.cm.gray_r, interpolation='nearest')
-    plt.show()
+    file_name = f"visualize_filter.jpg"
+    if train:
+        file_name = f"visualize_filter_trained.jpg"
+    plt.savefig(file_name)
 
 
 network = SimpleConvNet()
@@ -25,4 +28,4 @@ filter_show(network.params['W1'])
 
 # 학습된 가중치
 network.load_params("params.pkl")
-filter_show(network.params['W1'])
+filter_show(network.params['W1'], train=True)
